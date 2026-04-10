@@ -341,3 +341,207 @@ footer div:hover{
         margin: 2rem auto;
     }
 }
+/* =========================================
+   STYLE POUR LA PAGE PROJETS
+   ========================================= */
+
+main {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+main h1 {
+    color: var(--violet-doux);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Barre de séparation sous le titre */
+.underline {
+    width: 60px;
+    height: 4px;
+    background-color: var(--orange-vif);
+    margin: 0 auto 3rem;
+    border-radius: 2px;
+}
+
+/* Grille des projets */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 2rem;
+}
+
+/* Style de la carte individuelle */
+.project-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--gris-clair);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(108, 99, 255, 0.2); /* Ombre violette légère */
+}
+
+/* Image du projet */
+.card-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background-color: var(--gris-tres-clair);
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .card-image img {
+    transform: scale(1.1);
+}
+
+/* Contenu de la carte */
+.card-content {
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-content h3 {
+    color: var(--gris-tres-fonce);
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    color: var(--gris-fonce);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+/* Badges / Tags de technologies */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.tag {
+    background: var(--gris-tres-clair);
+    color: var(--violet-doux);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border: 1px solid var(--violet-doux);
+}
+
+/* Footer de la carte (Boutons Code & Démo) */
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    border-top: 1px solid var(--gris-clair);
+}
+
+.card-footer a {
+    text-decoration: none;
+    color: var(--gris-tres-fonce);
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.card-footer a:hover {
+    color: var(--violet-doux);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+    }
+    
+    main h1 {
+        font-size: 2rem;
+    }
+}
+
+.divertissement { text-align: center; margin: 6rem 2rem; } .div-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; width: 90%; margin: 3rem auto; } .div-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease; } .div-card:hover { transform: translateY(-8px); } .div-image { height: 200px; overflow: hidden; } .div-image img { width: 100%; height: 100%; object-fit: cover; } .div-content { padding: 1.5rem; } .div-content h3 { color: var(--violet-doux); margin-bottom: 0.5rem; } .div-content p { color: var(--gris-fonce); } /* Responsive */ @media (max-width: 768px) { .div-grid { grid-template-columns: 1fr; } } 
+
+
+
+/* Grid identique */
+.passions .div-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    width: 80%;
+    margin: 3rem auto;
+}
+
+/* Carte */
+.passions .div-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Image bien proportionnée */
+.passions .div-image {
+    width: 100%;
+    height: 160px; /* taille équilibrée */
+    overflow: hidden;
+}
+
+.passions .div-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Contenu */
+.passions .div-content {
+    padding: 1.5rem;
+}
+
+.passions .div-content h3 {
+    color: var(--violet-doux);
+    margin-bottom: 0.5rem;
+}
+
+.passions .div-content p {
+    color: var(--gris-fonce);
+    font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .passions .div-grid {
+        grid-template-columns: 1fr;
+    }
+}
